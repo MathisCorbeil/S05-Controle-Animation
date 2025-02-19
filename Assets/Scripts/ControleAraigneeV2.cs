@@ -27,11 +27,22 @@ public class ControleAraigneeV2 : MonoBehaviour
         _animator.SetFloat("Deplacement", directionInput.magnitude);
     }
 
+    void OnAttack()
+    {
+        _animator.SetTrigger("Attack");
+        
+    }
+
     void FixedUpdate()
     {
         // calculer et appliquer la translation
         Vector3 mouvement = directionInput;
         float rotation = 0f;
+
+     
+        {
+            
+        }
         // si on a une direction d'input
         if (directionInput.magnitude > 0f)
         {
